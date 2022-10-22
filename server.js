@@ -23,12 +23,11 @@ fs.readFile('./public/index.html', 'utf8', (err, data) => {
         console.error(err);
         return;
     }
-});
 
-// Define a const `server` as an arrow function using http.createServer. 
-// Use the documentation for the node.js http module. 
-// The function should have three responses: 
-const server = http.createServer((req, res) => {
+    // Define a const `server` as an arrow function using http.createServer. 
+    // Use the documentation for the node.js http module. 
+    // The function should have three responses: 
+    const server = http.createServer((req, res) => {
     // 1. status code 200, 
     res.statusCode = 200;
 
@@ -37,6 +36,7 @@ const server = http.createServer((req, res) => {
 
     // 3. end with the data that you are reading in from ./public/index.html.
     res.end(data);
+    });
 });
 
 // Start the `server` const listening on the port defined by argument in your `port` const. 
