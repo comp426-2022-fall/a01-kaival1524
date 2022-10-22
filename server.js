@@ -28,14 +28,14 @@ fs.readFile('./public/index.html', 'utf8', (err, data) => {
     // Use the documentation for the node.js http module. 
     // The function should have three responses: 
     const server = http.createServer((req, res) => {
-    // 1. status code 200, 
-    res.statusCode = 200;
+        // 1. status code 200, 
+        res.statusCode = 200;
 
-    // 2. set a header with content type `text/html`, and 
-    res.setHeader('Content-Type', 'test/html');
+        // 2. set a header with content type `text/html`, and 
+        res.setHeader('Content-Type', 'text/html');
 
-    // 3. end with the data that you are reading in from ./public/index.html.
-    res.end(data);
+        // 3. end with the data that you are reading in from ./public/index.html.
+        res.end(data);
     });
 
     // Start the `server` const listening on the port defined by argument in your `port` const. 
